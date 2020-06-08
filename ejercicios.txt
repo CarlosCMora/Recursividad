@@ -1,0 +1,111 @@
+Algoritmo misterioso.
+1. Decidir el parámetro n, que indica el tamaño de la entrada
+2. Identificar la operación básica del algoritmo
+3. Determinar si el número de veces que la operación básica es ejecutada puede variar para diferentes entradas del mismo tamaño(analizar el peor caso, caso medio y el mejor caso)
+4. Expresar como una relación de recurrencia, con una condición inicial, el número total de ejecuciones de la operación básica.
+5. Resolver la relación de recurrencia, para encontrar la fórmula Explícita para el término genérico que satisfaga la recurrencia Y la condición inicial o probar que no existe
+
+a) x(n) = x(n-1) + 5 para n >1, x(1) = 0
+	1)El numero que multiplica por 5
+	2)n*5
+	3)No cambia
+	4)Condicion inicial M(1) = 0
+	  M(n) = M(N-1) + 5
+	5)M((N-2)+5)+5
+	  M(n-2)+10
+	  M(n-3)+15
+	  M(n-i)+5i
+	  M(n-n)+5n
+	  M(0)+5n
+	  5n
+	  Lineal
+b) x(n) = 3x(n-1)  para n >1, x(1) = 4
+	1)Multiplica 4 por 3^n
+	2)4*3^n
+	3)No cambia
+	4)Condición inicial M(1) = 4
+	  M(n) = 3*M(n-1)
+	5)3*(3*M(n-2))
+	  9*M(n-2)
+	  9*(3*M(n-3))
+	  27*(M(n-3)
+	  3^i(M(n-i))
+	  3^n(M(n-n))
+	  3^n(M(0))
+	  3^n
+	Es de orden exponencial.
+c) x(n) = x(n-1) + n para n >0, x(0) = 0
+	1)Es la suma de 0 a n
+	2)n+(n-1)+(n-2)+...+1+0
+	3)No cambia
+	4)Condición inicial M(0) = 0
+	5)M((n-2)+(n-1))+n
+	  M(n-2)+2n-1
+	  M((n-3)+(n-2))+2n-1
+	  M(n-3)+3n-3
+	  M(n-i)+in-i
+	  M(n-n)+n*n-n
+	  M(0)+n^2-n
+	  n^2
+	Orden cuadratico
+d) x(n) = x(n/2) + n para n >1, x(1) = 1 (resolver para n = 2k)
+	1)Suma de la mitad de los números
+	2)n+(n/2)+(n/4)+(n/8)+...+1
+	3)No cambia
+	4)M(1)=1
+	5)M(n/4+n/2)+n
+	  M(n/8+n/4)+n+n/2
+	  M(n/8)+7n/4
+	  M(n/2^i)+n*(1+1/2^i)
+	  log(n)
+Algoritmo misterioso(n): 
+	s← 0 
+	Para i← 1 hasta n hacer 
+		s← s + i*i
+		i++ 
+	Fin Para 
+	devolver s 
+Fin
+¿Qué calcula el algoritmo? 
+¿Cuál es la operación básica? 
+¿Cuántas veces se ejecuta la operación básica? 
+¿Cuál es la eficiencia del algoritmo? 
+Sugerir una  mejora al algoritmo
+
+
+
+MergeSort
+
+
+
+
+
+Busqueda binaria
+
+1)El tamaño de a
+2)Busqueda.
+3)Sí cambia
+4)M(1)=0
+  M(n)=M(n/2)+1
+5)M(n/4+1)+1
+  M(n/8+1)+2
+  M(n/2^i)+i
+  i=log(n)
+  M(n/n)+log(n)=log(n)
+
+log(n)
+Buyrbuja(a):
+	Para j<-1 hasta n-1 hacer:
+		Para j<-1 hasta n-i hacer:
+			Si a[j]>a[j+1] Entonces
+				aux<-a[j]
+				a[j]= a[j+1]
+				a[j+1]=a[j]
+			FinSi
+		Finpara
+	Finpara
+Fin
+
+(n-1)*(n(3)
+n^2
+

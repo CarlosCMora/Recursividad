@@ -1,0 +1,44 @@
+COMO CALCULAR COMPLEJIDAD
+
+Las sentencias de asignacion son de orden constante, es decir O(1)
+
+La complejidad de una sentencia de selección es el maximo de las complejidades del bloque verdadero más el bloque falso
+
+La complejidad de selección multiple es el maximo de las complejidades de todos los casos
+
+La complejidad de un bucle se estima con el numero maximo de interaciones para el peor caso; entonces la complejidad del bucle es el producto del numero de iteraciones por la complejidad de las sentencias que formanel bucle.
+
+La complejidad de un bloque, se calculacon la suma de complejidades de cada sentencia del bloque.
+
+La complejidad de la llamada a una función es de orden 1
+
+Ordenado de mayor a menor complejidad
+
+n! 2^n n^k nlog(n) n log(n) (1)
+
+
+
+Ejercicio 1
+
+cuenta<- 0					1
+resto <- dividendo				1
+Repetir
+	resto<-resto - dividendo		1
+	cuenta <- cuenta + 1			1
+Hasta que(resto<divisor)			n
+Coeficiente<-cuenta
+
+1+1+n(1+1)= n
+O(n)
+
+Ejercicio 2
+
+Producto<-y					1
+Cuenta<-1					1
+Mientras cuenta<x hacer				n
+	producto <- producto + y		1
+	cuenta<- cuenta + 1			1
+FinMientras
+
+1+1+n(1+1)= n
+O(n)
